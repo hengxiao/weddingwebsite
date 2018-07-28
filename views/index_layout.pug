@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  // Intro
+  section#intro(class="main style1 dark")
+    div(class="content container small shadow")
+      block intro
+
+  section#adventure_gallery(class="main style3 primary")
+    -
+      var adventure_images = [
+       // {filename: "minnesota_2.png", title: "Henry at Detroit Lakes, MN"},
+       // {filename: "minnesota_1.png", title: "Daisy at Detroit Lakes, MN"},
+       [
+         {filename: "museum_of_ice_cream_1.png", title: "Museum of Ice Cream, San Francisco"},
+         {filename: "yosemite_mono_pass_2.png", title: "Mono Pass Trail, Yosemite National Park"},
+         {filename: "luzia.png", title: "Luzia, Circus du Soleil"}
+       ], [
+         {filename: "duluth.png", title: "Duluth, MN"},
+         {filename: "tomales_point.png", title: "Tomales Point Trail, Point Reyes"},
+         {filename: "tahoe_1.png", title: "Sierra Ski Resort, Lake Tahoe"}
+       ]
+      ]
+    div(class="content container clearbg")
+      header
+        block adventure_header
+      // Lightbox Gallary
+      // Powered by poptrox. Full doc here: https://github.com/n33/jquery.poptrox
+      div(class="container small animated gallery")
+        each column in adventure_images
+          div(class="column")
+            each image in column
+              a(href="images/large/" + image.filename)
+                img(class="image full" src="images/small/" + image.filename title=image.title)
+      p 
+      
+  section#ceremony(class="main style3 dark")
+    div(class="content container small shadow")
+      block ceremony

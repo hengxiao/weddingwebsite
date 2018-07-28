@@ -1,0 +1,31 @@
+extend index_layout
+
+block title
+  | Henry and Daisy's Wedding
+
+block intro
+  header
+    h2
+      span(class="monospace") Henry
+      span(class="fancy") & Daisy
+    h3(class="typewriter") September 
+      sup 29th
+      | , 2018
+  p Welcome to our wedding website! We are still working on it, but please hang around and take a look!
+  footer
+    a(href="#ceremony" class="button style2 down") More
+
+block ceremony
+  header
+    h2 The Ceremony
+  p We are getting married on September 29th, 2018 at the 
+    a(href="https://religiouslife.stanford.edu/memorial-church/stanford-memorial-church-information")
+      | Stanford Memorial Church
+  p The ceremony begins at 2:45 PM.
+  p Our reception will be at 
+    a(href="http://www.ritzcarlton.com/en/hotels/california/half-moon-bay") the Ritz-Carlton, Half Moon Bay
+    | , by the beautiful Pacific coast.
+  p(style="font-size: 8pt") TODO: disclamer
+
+block adventure_header
+  h2 Adventure

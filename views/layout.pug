@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title
+      block title
+    script(src="javascripts/jquery.min.js")
+    script(src="javascripts/jquery.poptrox.min.js")
+    script(src="javascripts/skel.min.js")
+    script(src="javascripts/init.js")
+    noscript
+      link(rel='stylesheet', href='/stylesheets/skel-noscript.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+    
+  body
+    header#header
+      h1#logo
+        a(href="/index.html") 
+          span
+            span(class="monospace") Henry
+            span(class="fancy") & Daisy
+      nav#nav
+        ul
+          li
+            a(href="/index.html") Home
+    section#mobile_bar(class="main style1 dark mobile_only")
+      div(class="content container small")
+        a(href="/index.html") Home
+    div#content
+      block content
+    footer#footer
+      ul(class="action")
+      ul(class="menu")
+        li &copy; Henry Xiao & Daisy Chen
+        li Design 
+          a(href="http://html5up.net/") HTML5 Up
