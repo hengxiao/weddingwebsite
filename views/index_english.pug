@@ -4,20 +4,27 @@ block title
   | Henry and Daisy's Wedding
 
 block intro
-  header
+  header(class="header")
     h2
-      span(class="monospace") Henry
-      span(class="fancy") & Daisy
-    h3(class="typewriter") September 
-      sup 29th
-      | , 2018
+      div(class="fancy") Mr. Heng Xiao
+      br
+      div(class="typewriter") and
+      br
+      div(class="fancy") Miss Xingguo Chen
+    br
+  div(class="typewriter") at
+  h3(class="fancy context") Stanford Memorial Church
+  h3(class="typewriter") September 
+    sup 29th
+    | , 2018
   p Welcome to our wedding website! We are still working on it, but please hang around and take a look!
+  img(src="/images/small/lily_motif.png" style="height: 5em")
   footer
     a(href="#ceremony" class="button style2 down") More
 
 block ceremony
   header
-    h2 The Ceremony
+    h2(class="fancy") The Ceremony
   p We are getting married on September 29th, 2018 at the 
     a(href="https://religiouslife.stanford.edu/memorial-church/stanford-memorial-church-information")
       | Stanford Memorial Church
@@ -28,4 +35,4 @@ block ceremony
   p(style="font-size: 8pt") TODO: disclamer
 
 block adventure_header
-  h2 Adventure
+  h2(class="fancy") Memory

@@ -2,10 +2,14 @@ extends layout
 
 block content
   // Intro
-  section#intro(class="main style1 dark")
+  section#intro(class="main style1")
     div(class="content container small shadow")
       block intro
 
+  section#ceremony(class="main style3")
+    div(class="content container small shadow clearbg")
+      block ceremony
+      
   section#adventure_gallery(class="main style3 primary")
     -
       var adventure_images = [
@@ -34,6 +38,3 @@ block content
                 img(class="image full" src="images/small/" + image.filename title=image.title)
       p 
       
-  section#ceremony(class="main style3 dark")
-    div(class="content container small shadow")
-      block ceremony

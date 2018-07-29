@@ -4,49 +4,60 @@
 @import url(http://fonts.googleapis.com/css?family=Cutive);
 @import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
 @font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
-
+@font-face {
+  font-family: "Alana";
+  src: url("/fonts/Alana.woff") format("woff");
+}
+@font-face {
+  font-family: "Alana2";
+  src: url("/fonts/Alana2.woff") format("woff");
+}
 /*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 
 	.typewriter, h2 {
-		font-family: 'Cutive', serif;
+		font-family: 'Arial', serif;
 		font-weight: 400;
 	}
 	.fancy {
-		font-family: 'Lovers Quarrel', cursive;
+		font-family: 'Alana', 'Alana2', cursive;
 		font-weight: 400;
 	}
 	.monospace {
-		font-family: 'Cutive', serif;
+		font-family: 'Arial', serif;
 		font-weight: 400;
 	}
-	
 	#header .fancy {
 		font-weight: 400;
-		font-size: 20pt;
+		font-size: 13pt;
 	}
 	#header .monospace {
 		font-size: 13pt;
 	}
 
 	#intro .fancy {
-		font-size: 80pt;
+		font-size: 50pt;
 	}		
 
 	#intro .monospace {
 		font-size: 50pt;
 	}
 
+	#intro .context {
+	        font-size: 25pt;
+	        line-height: 30pt;
+	}
+	
 	.shadow {
-		text-shadow: 0px 0px 10px #000;
+		//text-shadow: 0px 0px 10px #000;
 	}
 	.mobile_only {
 		display: none;
 	}
 
 	.clearbg {
-		background-color: rgba(255, 255, 255, 0.7) !important;
+		background-color: rgba(255, 249, 225, 0.9) !important;
 	}
 
 	#mobile_bar {
@@ -85,7 +96,7 @@
 		font-weight: 300;
 		font-size: 20pt;
 		line-height: 1.75em;
-		color: #39454b;
+		color: #a9a18f;
 		letter-spacing: 0.5px;
 	}
 
@@ -102,7 +113,7 @@
 	h2 {
 		font-size: 2.25em;
 		letter-spacing: -2px;
-		line-height: 1.25em;
+		line-height: 1em;
 	}
 		
 	strong, b {
@@ -533,9 +544,9 @@
 			}
 			
 				.main.style1 h2 {
-					font-size: 4.25em;
-					line-height: 1em;
-					letter-spacing: -4px;
+					font-size: 1.25em;
+					line-height: 1.5em;
+					//letter-spacing: -4px;
 				}
 				
 				.main.style1 .content {
@@ -1084,14 +1095,14 @@
 /*********************************************************************************/
 
 	#header {
-		color: white;
-		position: fixed;
+	    color: black;
+	    position: fixed;
 		z-index: 10000;
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #282234;
-		background: rgba(28,22,34,0.95);
+		background: #4c4d43;
+		background: white;//rgba(53,68,55,0.95);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
@@ -1147,7 +1158,8 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/small/oregon_sunset.png');
+	    /*background: url('images/overlay.png'), url('../images/small/oregon_sunset.png');*/
+	    background-color: #fff9e1;
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: 0%, 30%;
