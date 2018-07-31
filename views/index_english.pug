@@ -100,21 +100,21 @@ block adventure_header
 block rsvp
   h2(class="fancy") RSVP
   p By September 15th, 2018
-  form
+  form(action="/rsvp" method="post")
     p
       h2(class="fancy" style="display: inline") M:&nbsp;
       input(type="text" name="name" style="width: 20em; display: inline")
       br
-      input(type="text" value="1" pattern="[0-3]" style="width: 4em; display: inline" min="0" max="3")
+      input(type="text" name="attending" value="1" pattern="[0-3]" style="width: 4em; display: inline" min="0" max="3")
       | Number Attending
       br
       | Please initial meal preference for each guest
       br
-      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      input(type="text" name="turf" value="" style="width: 6em; display: inline; font-size: 10pt")
       | Turf&nbsp;&nbsp;
-      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      input(type="text" name="surf" value="" style="width: 6em; display: inline; font-size: 10pt")
       | Surf&nbsp;&nbsp;
-      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      input(type="text" name="vege" value="" style="width: 6em; display: inline; font-size: 10pt")
       | Vegeterian&nbsp;&nbsp;
       br
       

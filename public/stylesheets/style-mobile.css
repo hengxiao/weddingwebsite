@@ -98,6 +98,10 @@
 		line-height: 2.5em;
 	}
 
+	#header .fancy {
+		font-size: 13pt;
+	}
+
 	body {
 		padding-top: 2.5em;
 	}
@@ -107,8 +111,7 @@
 		position: relative;
 		left: 0;
 		top: 0;
-		height: 2.5em;
-		line-height: 2.5em;
+		height: 100%;
 	}
 	
 		#logo a {

@@ -18,16 +18,19 @@ html
       nav#nav
         ul
           li
-            a(href="/index.html") Home
+            a(href="#intro") Home
           li
-            a(href="/index.html#events") Events
+            a(href="#events") Events
           li
-            a(href="/rsvp") RSVP
+            a(href="#rsvp") RSVP
           li
-            a(href="/faq") FAQ
-    section#mobile_bar(class="main style1 mobile_only")
+            a(href="#faq") FAQ
+    header#mobile_bar(class="mobile_only")
       div(class="content container small")
-        a(href="/index.html") Home
+        a(href="/#top") Home
+        a(href="/#events") Events
+        a(href="/#rsvp") RSVP
+        a(href="/#faq") FAQ
     div#content
       block content
     footer#footer

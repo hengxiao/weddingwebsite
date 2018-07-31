@@ -30,7 +30,7 @@
 	}
 	#header .fancy {
 		font-weight: 400;
-		font-size: 13pt;
+		font-size: 20pt;
 	}
 	#header .monospace {
 		font-size: 13pt;
@@ -164,7 +164,7 @@
 	}
 
 	header {
-		margin-bottom: 1em;
+		//margin-bottom: 1em;
 	}
 	
 		header p {
@@ -545,6 +545,7 @@
 			margin: 0;
 			overflow-x: hidden;
 			background-color: #fff9e1;
+			min-height: 100vh;
 		}
 		
 			.main.style1 {
@@ -1122,13 +1123,14 @@
 	}
 
 	#logo {
-		position: absolute;
-		left: 1em;
+		position: inline;
+		margin-left: 1em;
+		margin-right: 1em;
 		top: 0;
-		height: 3em;
+		height: 100%;
 		line-height: 3em;
 		letter-spacing: -1px;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 	
 		#logo a {
@@ -1136,13 +1138,13 @@
 		}
 		
 	#logotext {
-	    position: absolute;
+	    position: inline;
 	    left: 5em;
 		top: 0.5em;
 		height: 3em;
 		line-height: 3em;
 		letter-spacing: -1px;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 	
 	#nav {
