@@ -40,7 +40,8 @@
 			}
 
 				.main.style1 h2 {
-					font-size: 3em;
+				    font-size: 1em;
+				    line-height: 2em;
 					letter-spacing: -3px;
 				}
 
@@ -70,6 +71,25 @@
 			}
 
 /*********************************************************************************/
+/* New Gallery                                                                   */
+/*********************************************************************************/
+	.column-block-mobile-disable {
+	    display: block;
+	    padding: 4px;
+	}
+	
+		.column-block-mobile-disable .column {
+		    max-width: 100%;
+		    padding: 0 4px;
+		}
+			
+			.column-block-mobile-disable .column img {
+			    margin-top: 8px;
+			    vertical-align: middle;
+			    image-orientation: from-image;
+			}
+
+/*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
 
@@ -94,6 +114,12 @@
 		#logo a {
 			font-size: 1em;
 		}
+
+	#logotext {
+	    height: 2.5em;
+	    left: 3em;
+	    top: 0em;
+	}
 	
 	#nav {
 		display: none;

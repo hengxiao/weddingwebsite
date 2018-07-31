@@ -6,33 +6,140 @@ block title
 block intro
   header(class="header")
     h2
-      div(class="fancy") Mr. Heng Xiao
-      br
-      div(class="typewriter") and
-      br
-      div(class="fancy") Miss Xingguo Chen
+      span
+        span(class="fancy") Heng Xiao&nbsp;
+        br(class="mobile_only")
+        span(class="fancy") & &nbsp;
+        br(class="mobile_only")
+        span(class="fancy") Xingguo Chen
     br
-  div(class="typewriter") at
-  h3(class="fancy context") Stanford Memorial Church
   h3(class="typewriter") September 
     sup 29th
     | , 2018
-  p Welcome to our wedding website! We are still working on it, but please hang around and take a look!
-  img(src="/images/small/lily_motif.png" style="height: 5em")
   footer
-    a(href="#ceremony" class="button style2 down") More
+    a(href="#summary" class="button style2 down") More
+
+block summary
+  header
+    h2(class="fancy") Our Story
+  p TODO: our story
+
+block weddingparty_title
+  h2(class="fancy") Wedding Party
+
+block weddingparty_bridesmaids
+  h2(class="fancy") Bridesmaids
+  p TODO
+
+block weddingparty_groomsmen
+  h2(class="fancy") Groomsmen
+  p TODO
+
+block events_header
+  h2(class="fancy") Events
 
 block ceremony
   header
-    h2(class="fancy") The Ceremony
-  p We are getting married on September 29th, 2018 at the 
-    a(href="https://religiouslife.stanford.edu/memorial-church/stanford-memorial-church-information")
-      | Stanford Memorial Church
-  p The ceremony begins at 2:45 PM.
-  p Our reception will be at 
-    a(href="http://www.ritzcarlton.com/en/hotels/california/half-moon-bay") the Ritz-Carlton, Half Moon Bay
-    | , by the beautiful Pacific coast.
-  p(style="font-size: 8pt") TODO: disclamer
+    h2(class="fancy") Ceremony
+  img(src="/images/small/church.png" width="90%")
+  p
+    | Stanford Memorial Church
+    br
+    | [
+    a(href="https://religiouslife.stanford.edu/memorial-church/stanford-memorial-church-information") Website
+    | |
+    a(href="https://www.google.com/maps/place/Stanford+Memorial+Church") Map
+    | ]
+  p September 29th, 2018
+    br
+    | 3:00 PM
+
+block reception
+  header
+    h2(class="fancy") Reception
+  img(src="/images/small/ritz_carlton.jpeg" width="90%")
+  p
+    | The Ritz-Carlton,
+    br(class="mobile_only")
+    | Half Moon Bay
+    br
+    | [
+    a(href="http://www.ritzcarlton.com/en/hotels/california/half-moon-bay") Website
+    | |
+    a(href="https://www.google.com/maps/place/The+Ritz-Carlton,+Half+Moon+Bay") Map
+    | ]
+  p Sat Sept 29th 2018, 5:00 PM
+
+block accommodation
+  header
+    h2(class="fancy") Accommodation
+  p
+    | For your convenience, we have recerved limited number of rooms at
+    br
+    | Aloft San Francisco Airport.
+  img(src="/images/small/aloft.jpg" width="300px")
+  p
+    | 401 East Millbrae Ave
+    br
+    | Millbrae, CA 94030
+    br
+    | (650) 443-5500
+    br
+    | [
+    a(href="http://www.aloftsanfranciscoairport.com/") Website
+    | |
+    a(href="https://www.google.com/maps/place/Aloft+San+Francisco+Airport") Map
+    | ]
+  p
+    | Please book your room before September 15th and mention the
+    | Xiao/Chen Wedding Party to receive the special rate.
 
 block adventure_header
   h2(class="fancy") Memory
+
+block rsvp
+  h2(class="fancy") RSVP
+  p By September 15th, 2018
+  form
+    p
+      h2(class="fancy" style="display: inline") M:&nbsp;
+      input(type="text" name="name" style="width: 20em; display: inline")
+      br
+      input(type="text" value="1" pattern="[0-3]" style="width: 4em; display: inline" min="0" max="3")
+      | Number Attending
+      br
+      | Please initial meal preference for each guest
+      br
+      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      | Turf&nbsp;&nbsp;
+      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      | Surf&nbsp;&nbsp;
+      input(type="text" style="width: 6em; display: inline; font-size: 10pt")
+      | Vegeterian&nbsp;&nbsp;
+      br
+      
+    input(type="submit" name="submit" value="Submit")
+
+block faq
+  h2(class="fancy") FAQ
+  ol(class="default")
+    li Q. Which airport do you recommend to choose?
+    p A.&nbsp;
+      | We recommend flying into San Francisco International Airport (SFO).
+      | Aloft San Francisco Airport provides 24/7 free shuttle service between the hotel and SFO.
+      | Phone Number: (650) 443-5500
+    li Q. How do I get to the ceremony? Where do I park?
+    p A.&nbsp;
+      | For guests from local, we recommend you coming to Stanford by car.
+      |  You can park your car at Roth Way Garage on Stanford Campus [
+      a(href="https://www.google.com/maps/dir//Roth+Way+Garage,+Palo+Alto,+CA+94304/") direction
+      | ].
+    p
+      | For guests from out of town, we will provide shuttle service between Aloft, ceremony,
+      |  and reception venue. If you choose accommodation other than Aloft San Francisco Airport, 
+      |  please notify us, and we will make arrangement for you.
+    li Q. What is the dress code.
+    p A.&nbsp;
+      | The dress code for ceremony and reception is black tie optional.
+      | For ladies, we expect an evening gown or a cocktail dress.
+      | For gentlemen, we expect a tuxido or a dark lounge suit and tie.

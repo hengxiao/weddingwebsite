@@ -37,7 +37,8 @@
 	}
 
 	#intro .fancy {
-		font-size: 50pt;
+	    font-size: 40pt;
+	    line-height: 60pt;
 	}		
 
 	#intro .monospace {
@@ -45,12 +46,12 @@
 	}
 
 	#intro .context {
-	        font-size: 25pt;
+	        font-size: 22pt;
 	        line-height: 30pt;
 	}
 	
 	.shadow {
-		//text-shadow: 0px 0px 10px #000;
+		text-shadow: 0 0 20px #111;
 	}
 	.mobile_only {
 		display: none;
@@ -61,8 +62,9 @@
 	}
 
 	#mobile_bar {
-		background-color: rgba(28, 22, 34, 0.952941); 
+		background-color: rgba(255, 249, 225); 
 		padding: 0px 0px 15px 0px;
+		border-bottom: 1px solid #a9a18f;
 	}
 	#mobile_bar a {
 		text-decoration: none;
@@ -96,7 +98,8 @@
 		font-weight: 300;
 		font-size: 20pt;
 		line-height: 1.75em;
-		color: #a9a18f;
+		color: #807866;
+		//color: #111;
 		letter-spacing: 0.5px;
 	}
 
@@ -126,8 +129,6 @@
 	}
 
 	a {
-		color: #785084;
-
 		-moz-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		-webkit-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
 		-o-transition: all 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -317,10 +318,11 @@
 		ol.default {
 			list-style: decimal;
 			padding-left: 1.25em;
+			text-align: left;
+			text-indent: 1em;
 		}
 
 			ol.default li {
-				padding-left: 0.25em;
 			}
 
 	/* Forms */
@@ -331,18 +333,24 @@
 			form label {
 				display: block;
 			}
-		
+
+			form input[type="text"] {
+				text-align: center;			    
+			}
+			
 			form input[type="text"],
 			form input[type="password"],
+			form input[type="number"],
 			form select,
 			form textarea {
 				display: block;
 				width: 100%;
 				padding: 0.75em;
 				background: none;
-				border: solid 2px rgba(185,186,187,0.25);
+				border: 0;
+				border-bottom: solid 2px rgba(185,186,187,0.25);
 				color: inherit;
-				border-radius: 0.5em;
+				//border-radius: 0.5em;
 				outline: none;
 
 				-moz-appearance: none;
@@ -536,6 +544,7 @@
 			position: relative;
 			margin: 0;
 			overflow-x: hidden;
+			background-color: #fff9e1;
 		}
 		
 			.main.style1 {
@@ -646,7 +655,7 @@
 	/* Dark */
 
 		.dark {
-			color: #fff;
+		    color: #fff;
 		}
 
 			.dark a {
@@ -1095,14 +1104,14 @@
 /*********************************************************************************/
 
 	#header {
-	    color: black;
+	    color: #111;
 	    position: fixed;
 		z-index: 10000;
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #4c4d43;
-		background: white;//rgba(53,68,55,0.95);
+		background: rgba(255, 249, 225, 0.9);
+		//background: white;//rgba(53,68,55,0.95);
 		height: 3em;
 		line-height: 3em;
 		box-shadow: 0 0 0.15em 0 rgba(0,0,0,0.1);
@@ -1119,11 +1128,22 @@
 		height: 3em;
 		line-height: 3em;
 		letter-spacing: -1px;
+		vertical-align: middle;
 	}
 	
 		#logo a {
 			font-size: 1.25em;
 		}
+		
+	#logotext {
+	    position: absolute;
+	    left: 5em;
+		top: 0.5em;
+		height: 3em;
+		line-height: 3em;
+		letter-spacing: -1px;
+		vertical-align: middle;
+	}
 	
 	#nav {
 		position: absolute;
@@ -1158,8 +1178,7 @@
 /*********************************************************************************/
 
 	#intro {
-	    /*background: url('images/overlay.png'), url('../images/small/oregon_sunset.png');*/
-	    background-color: #fff9e1;
+	    background: url('images/overlay.png'), url('../images/small/oregon_sunset.png');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: 0%, 30%;
@@ -1246,15 +1265,27 @@
 	}
 
 /*********************************************************************************/
-/* Ceremony section                                                                  */
+/* Events section                                                                  */
 /*********************************************************************************/
 
-	#ceremony {
+	#events {
 		background: url('images/overlay.png'), url('https://religiouslife.stanford.edu/sites/default/files/styles/page-width/public/credit_catherine_hall_72dpi.jpg?itok=m0rvPiH3');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+
+/*********************************************************************************/
+/* Summary section                                                                  */
+/*********************************************************************************/
+
+	#summary {
+		background: url('images/overlay.png'), url('../images/small/museum_of_ice_cream_1.png');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
 
 /*********************************************************************************/
 /* Ceremony main page section                                                                  */
@@ -1387,19 +1418,19 @@
 /*********************************************************************************/
 /* New Gallery                                                                   */
 /*********************************************************************************/
-	.gallery {
+	.column-block {
 	    display: flex;
 	    flex-wrap: wrap;
 	    padding: 4px;
 	}
 	
-		.gallery .column {
+		.column-block .column {
 		    flex: 50%;
 		    max-width: 50%;
 		    padding: 0 4px;
 		}
 			
-			.gallery .column img {
+			.column-block .column img {
 			    margin-top: 8px;
 			    vertical-align: middle;
 			    image-orientation: from-image;

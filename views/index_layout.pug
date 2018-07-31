@@ -3,12 +3,37 @@ extends layout
 block content
   // Intro
   section#intro(class="main style1")
-    div(class="content container small shadow")
+    div(class="content container small shadow dark")
       block intro
 
-  section#ceremony(class="main style3")
-    div(class="content container small shadow clearbg")
-      block ceremony
+  section#summary(class="main style2")
+    div(class="content container small clearbg")
+      block summary
+      
+  section#weddingparty(class="main style3")
+    div(class="content container small clearbg")
+      header
+        block weddingparty_title
+      div(class="container small column-block column-block-mobile-disable")
+        div(class="column")
+          block weddingparty_bridesmaids
+        div(class="column")
+          block weddingparty_groomsmen
+      block weddingparty
+
+  section#events(class="main style3")
+    div(class="content container small clearbg")
+      header
+        block events_header
+      div(class="container small column-block column-block-mobile-disable")
+        div(class="column")
+          block ceremony
+        div(class="column")
+          block reception
+      
+  section#accommodation(class="main style2")
+    div(class="content container small clearbg")
+      block accommodation
       
   section#adventure_gallery(class="main style3 primary")
     -
@@ -30,11 +55,18 @@ block content
         block adventure_header
       // Lightbox Gallary
       // Powered by poptrox. Full doc here: https://github.com/n33/jquery.poptrox
-      div(class="container small animated gallery")
+      div(class="container small animated gallery column-block")
         each column in adventure_images
           div(class="column")
             each image in column
               a(href="images/large/" + image.filename)
                 img(class="image full" src="images/small/" + image.filename title=image.title)
       p 
-      
+
+  section#rsvp(class="main style3")
+    div(class="content container small clearbg")
+      block rsvp
+
+  section#faq(class="main style2")
+    div(class="content container small")
+      block faq
