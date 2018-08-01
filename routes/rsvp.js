@@ -7,12 +7,11 @@ var record_file = fs.createWriteStream("/home/heng890331/wedding_record/rsvp.txt
 
 /* GET RSVP page. */
 var rsvppage = function(req, res, next) {
-  res.render('index', { language: req.header["zh"] });
+    res.redirect("/#rsvp");
 };
 
 /* POST RSVP page. */
 var rsvppost = function(req, res, next) {
-    console.log(res);
     var name = req.body.name;
     var attending = req.body.attending;
     var turf = req.body.turf;
@@ -22,12 +21,14 @@ var rsvppost = function(req, res, next) {
 	record_file.write("name: " + name + ", attending: " + attending +
 			  ", turf: " + turf + ", surf: " + surf + ", vege: " + vege + "\n");
     } catch (error) {
-	console.log("error");
+	res.status(503);
+	res.send("Internal Database Error: Service unavailable for now");
+	return;
     }
-    res.render('index');
+    res.send(JSON.stringify(req.body));
 }
 
+router.get('/', rsvppage);
 router.post('/', rsvppost);
 
 module.exports = router;
-console.log("rsvp loaded");

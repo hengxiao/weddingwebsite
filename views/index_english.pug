@@ -29,11 +29,45 @@ block weddingparty_title
 
 block weddingparty_bridesmaids
   h2(class="fancy") Bridesmaids
-  p TODO
+  img(class="portrait" src="/images/small/bridesmaids1.jpg" width="100%")
+  h3(class="fancy") Xiaoni Hu
+  p(class="note") &nbsp;
+    br
+    | &nbsp;
+  hr
+  img(class="portrait" src="/images/small/portrait_placeholder_female.png" width="100%")
+  h3(class="fancy") Dan Wei
+  p(class="note") &nbsp;
+    br
+    | &nbsp;
+  hr
+  img(class="portrait" src="/images/small/bridesmaids3.png" width="100%")
+  h3(class="fancy") Yueying Ouyang
+  p(class="note") &nbsp;
+    br
+    | &nbsp;
+  hr
 
 block weddingparty_groomsmen
   h2(class="fancy") Groomsmen
-  p TODO
+  img(class="portrait" src="/images/small/groomsmen1.jpg" width="100%")
+  h3(class="fancy") Kun Xiao
+  p(class="note") Wonderful brother of the groom,
+    br
+    | future computer scientist
+  hr
+  img(class="portrait" src="/images/small/groomsmen2.jpg" width="100%")
+  h3(class="fancy") Yuanjia Xi
+  p(class="note") Perfect comrade in Highschool,
+    br
+    | both in school and WOW
+  hr
+  img(class="portrait" src="/images/small/portrait_placeholder_male.png" width="100%")
+  h3(class="fancy") Quinn Cheng
+  p(class="note") Best friend in Rutgers,
+    br
+    | the groom's first "driving instructor"
+  hr
 
 block events_header
   h2(class="fancy") Events
@@ -48,7 +82,7 @@ block ceremony
     | [
     a(href="https://religiouslife.stanford.edu/memorial-church/stanford-memorial-church-information") Website
     | |
-    a(href="https://www.google.com/maps/place/Stanford+Memorial+Church") Map
+    a(href="https://maps.google.com/?q=Stanford+Memorial+Church") Map
     | ]
   p September 29th, 2018
     br
@@ -66,7 +100,7 @@ block reception
     | [
     a(href="http://www.ritzcarlton.com/en/hotels/california/half-moon-bay") Website
     | |
-    a(href="https://www.google.com/maps/place/The+Ritz-Carlton,+Half+Moon+Bay") Map
+    a(href="https://maps.google.com/?q=The+Ritz-Carlton,+Half+Moon+Bay") Map
     | ]
   p Sat Sept 29th 2018, 5:00 PM
 
@@ -100,25 +134,38 @@ block adventure_header
 block rsvp
   h2(class="fancy") RSVP
   p By September 15th, 2018
-  form(action="/rsvp" method="post")
+  p NOT ENABLED YET. SUBMITTED RSVP MAY NOT BE SAVED
+  hr
+  br
+  form(id="rsvpForm" action="/rsvp" method="post" style="transition: visibility 0s, opacity 0.5s linear;")
     p
-      h2(class="fancy" style="display: inline") M:&nbsp;
-      input(type="text" name="name" style="width: 20em; display: inline")
+      h2(class="fancy" style="display: inline") Name:&nbsp;
+      input(type="text" name="name" placeholder="Your Name" style="width: 20em; display: inline" required)
       br
-      input(type="text" name="attending" value="1" pattern="[0-3]" style="width: 4em; display: inline" min="0" max="3")
-      | Number Attending
+      input(type="text" name="attending" placeholder="#" pattern="[0-9]" style="width: 4em; display: inline" required)
+      | &nbsp;Number Attending
+      br
       br
       | Please initial meal preference for each guest
       br
-      input(type="text" name="turf" value="" style="width: 6em; display: inline; font-size: 10pt")
-      | Turf&nbsp;&nbsp;
-      input(type="text" name="surf" value="" style="width: 6em; display: inline; font-size: 10pt")
-      | Surf&nbsp;&nbsp;
-      input(type="text" name="vege" value="" style="width: 6em; display: inline; font-size: 10pt")
-      | Vegeterian&nbsp;&nbsp;
+      input(type="text" name="turf" value="" style="width: 6em; display: inline;")
+      img(src="/images/small/turf.png" style="height: 2em")
+      | &nbsp;
+      input(type="text" name="surf" value="" style="width: 6em; display: inline;")
+      img(src="/images/small/surf.png" style="height: 2em")
+      | &nbsp;
+      input(type="text" name="vege" value="" style="width: 6em; display: inline;")
+      img(src="/images/small/vege.png" style="height: 2em")
       br
       
     input(type="submit" name="submit" value="Submit")
+    img(class="loader" src="http://localhost:3000/stylesheets/images/loader.gif")
+  div(id="rsvpMessage" style="transition: visibility 0s, opacity 0.5s linear;")
+    p
+      span
+    input(type="submit" value="Back")
+  br
+  hr
 
 block faq
   h2(class="fancy") FAQ

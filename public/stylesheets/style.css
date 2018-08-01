@@ -162,7 +162,7 @@
 	p, ul, ol, dl, table {
 		margin-bottom: 1em;
 	}
-
+	
 	header {
 		//margin-bottom: 1em;
 	}
@@ -181,6 +181,11 @@
 		clear: both;
 	}
 
+	p.note {
+	    font-size: 0.8em;
+	    line-height: 1em;
+	}
+	
 	/* Sections/Articles */
 	
 		section,
@@ -1318,7 +1323,7 @@
 /*********************************************************************************/
 
 	#rsvp {
-		background: url('images/overlay.png'), url('../images/waterfall.jpg');
+	    background: url('images/overlay.png');//, url('../images/waterfall.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top center;
@@ -1697,3 +1702,24 @@
 			body.touch .poptrox-popup .closer {
 				opacity: 1.0 !important;
 			}
+			
+/*********************************************************************************/
+/* Portrait Image                                                                */
+/*********************************************************************************/
+
+	img.portrait {
+	    border-radius: 50%;
+	    width: 10em;
+	}
+			
+/*********************************************************************************/
+/* RSVP                                                                          */
+/*********************************************************************************/
+
+	#rsvpForm *{
+	    vertical-align: bottom;
+	}
+	
+	        #rsvpForm img {
+		    height: 2em;
+	        }

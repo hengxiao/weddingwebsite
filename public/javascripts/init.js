@@ -66,6 +66,9 @@
 	// skel
 		skel.init(_settings.skel);
 
+        // rsvp
+                rsvp("#rsvpForm", "#rsvpMessage");
+
 	// jQuery
 		jQuery(function() {
 
