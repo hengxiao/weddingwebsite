@@ -1,0 +1,5 @@
+var rsvp = function(rsvpForm) {
+    form.submit(function(event) {
+	event.preventDefault();
+    });
+}

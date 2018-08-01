@@ -83,7 +83,7 @@
 					.addClass('loading')
 					.fadeTo(0, 0.0001);
 				
-				$window.load(function() {
+		        $window.on("load", function() {
 					window.setTimeout(function() {
 						$all
 							.fadeTo(_settings.fadeInSpeed, 1, function() {
@@ -259,7 +259,7 @@
 						window.setTimeout(function() {
 
 							// Update scrolly links
-								$('a[href^=#]').scrolly(1500, $header.outerHeight() - 1);
+								$('a[href^="#"]').scrolly(1500, $header.outerHeight() - 1);
 
 							// Resize fullscreen elements
 								if (_settings.useFullScreen
@@ -293,7 +293,7 @@
 					});
 					
 			// Trigger events on load
-				$window.load(function() {
+		        $window.on("load", function() {
 					$window
 						.trigger('resize')
 						.trigger('scroll');
