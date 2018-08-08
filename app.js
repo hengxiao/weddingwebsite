@@ -8,6 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var rsvpRouter = require('./routes/rsvp');
+var dinnerRouter = require('./routes/dinner_menu');
 
 var app = express();
 
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/index.html', indexRouter);
 app.use('/rsvp', rsvpRouter);
+app.use('/dinnermenu', dinnerRouter);
 app.use(bodyParser.urlencoded({
     extended: true
 }));

@@ -1,0 +1,76 @@
+extend layout
+
+block nav
+  ul
+    li
+      a(href="/") Home
+    li
+      a(href="#cocktail_menu") Cocktail Hour
+    li
+      a(href="#dinner_menu") Dinner
+
+block nav_mobile
+  a(href="#top") Home
+  a(href="#events") Events
+  a(href="#rsvp") RSVP
+  a(href="/dinnermenu") Food
+  a(href="#faq") FAQ
+
+block content
+  section#cocktail_menu(class="main style3")
+    div(class="content container small clearbg")
+      h2(class="fancy") The Cocktail Hour
+      p
+        b Heirloom Carrot Mole
+        br
+        | Radish, Pickled Chills, Cotija
+      p
+        b Roasted Beet
+        br
+        | Avocado Crema, Cilantro
+      p
+        b Pulled Pork
+        br
+        | Pickled Onions, Oaxaca Cheese
+      p
+        b Chilled Shrimp Ceviche
+        br
+        | Citrus, Radish
+      p
+        b Chicken Verde
+        br
+        | Poblanos, Jalapeno Jack
+	
+  section#dinner_menu(class="main style3")
+    div(class="content container small clearbg")
+      h2(class="fancy") Dinner Menu
+      p
+        img(src="/images/small/turf.png" style="height: 2em" alt="Turf")
+        br
+        b Cabernet Braised Beef Short Ribs
+        br
+        | Rosemary Potato Puree
+        br
+        | Daylight Farms Braised Swiss Chard
+        br
+        | Crispy Shallots, Cabernet Sause
+      hr
+      p
+        img(src="/images/small/surf.png" style="height: 2em" alt="Surf")
+        br
+        b Herb Crusted Local Sea Bass
+        br
+        | Heirloom Bean Ragout
+        br
+        | Giusti Farms Artichokes
+        br
+        | Tomatoes, Chardonnay Butter
+      hr
+      p
+        img(src="/images/small/vege.png" style="height: 2em" alt="Vege")
+        br
+        b Cauliflower Steak, Red Quiona Pilaf
+        br
+        | Carrots
+        br
+        | Mustard Vinaigrette

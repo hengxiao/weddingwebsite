@@ -17,9 +17,13 @@ var rsvppost = function(req, res, next) {
     var turf = req.body.turf;
     var surf = req.body.surf;
     var vege = req.body.vege;
+    var date = new Date();
     try {
 	record_file.write("name: " + name + ", attending: " + attending +
-			  ", turf: " + turf + ", surf: " + surf + ", vege: " + vege + "\n");
+			  ", turf: " + turf + ", surf: " + surf + ", vege: " + vege + ", ");
+	record_file.write("Date: " + date.toLocaleDateString() +
+			  ", Time: " + date.toLocaleTimeString());
+	record_file.write("\n");
     } catch (error) {
 	res.status(503);
 	res.send("Internal Database Error: Service unavailable for now");

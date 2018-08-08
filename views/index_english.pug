@@ -1,5 +1,25 @@
 extend index_layout
 
+block nav
+  ul
+    li
+      a(href="#intro") Home
+    li
+      a(href="#events") Events
+    li
+      a(href="#rsvp") RSVP
+    li
+      a(href="/dinnermenu") Food
+    li
+      a(href="#faq") FAQ
+
+block nav_mobile
+  a(href="#top") Home
+  a(href="#events") Events
+  a(href="#rsvp") RSVP
+  a(href="/dinnermenu") Food
+  a(href="#faq") FAQ
+
 block title
   | Henry and Daisy's Wedding
 
@@ -35,7 +55,7 @@ block weddingparty_bridesmaids
     br
     | &nbsp;
   hr
-  img(class="portrait" src="/images/small/portrait_placeholder_female.png" width="100%")
+  img(class="portrait" src="/images/small/bridesmaids2.png" width="100%")
   h3(class="fancy") Yueying Ouyang
   p(class="note") &nbsp;
     br
@@ -58,13 +78,13 @@ block weddingparty_groomsmen
   hr
   img(class="portrait" src="/images/small/groomsmen2.jpg" width="100%")
   h3(class="fancy") Yuanjia Xi
-  p(class="note") Perfect comrade in Highschool,
+  p(class="note") Perfect comrade in high school,
     br
-    | both in school and WOW
+    | both in school and <abbr title="World of Warcraft">WoW</abbr>
   hr
-  img(class="portrait" src="/images/small/portrait_placeholder_male.png" width="100%")
+  img(class="portrait" src="/images/small/groomsmen3.jpg" width="100%")
   h3(class="fancy") Quinn Cheng
-  p(class="note") Best friend in Rutgers,
+  p(class="note") Fantastic roommate in Rutgers,
     br
     | the groom's first "driving instructor"
   hr
@@ -108,7 +128,7 @@ block accommodation
   header
     h2(class="fancy") Accommodation
   p
-    | For your convenience, we have recerved limited number of rooms at
+    | For your convenience, we have reserved limited number of rooms at
     br
     | Aloft San Francisco Airport.
   img(src="/images/small/aloft.jpg" width="300px")
@@ -148,13 +168,13 @@ block rsvp
       br
       | Please initial meal preference for each guest
       br
-      input(type="text" name="turf" value="" style="width: 6em; display: inline;")
+      input(type="text" name="turf" placeholder="Turf" value="" style="width: 6em; display: inline;")
       img(src="/images/small/turf.png" style="height: 2em")
       | &nbsp;
-      input(type="text" name="surf" value="" style="width: 6em; display: inline;")
+      input(type="text" name="surf" placeholder="Surf" value="" style="width: 6em; display: inline;")
       img(src="/images/small/surf.png" style="height: 2em")
       | &nbsp;
-      input(type="text" name="vege" value="" style="width: 6em; display: inline;")
+      input(type="text" name="vege" placeholder="Vege" value="" style="width: 6em; display: inline;")
       img(src="/images/small/vege.png" style="height: 2em")
       br
       
@@ -166,6 +186,21 @@ block rsvp
     input(type="submit" value="Back")
   br
   hr
+
+block gift
+  h2(class="fancy") Gift Registry
+  br
+  p PREFER TO GIFT SOMETHING TANGIBLE?
+    br
+    | We've created registries with Amazon, REI, Bloomingdales, Crate & Barrel and Wayfair.
+    br
+    | Myregistry.com has a all-in-one list where you can browse them together.
+  p WANT TO GIVE US AN UNFORGETTABLE GIFT?
+    br
+    | Contribute to our Japan Honeymoon fund using the Myregistry link below.
+    br
+    | We'll be sure to send you postcards from places we get to enjoy and explore!
+
 
 block faq
   h2(class="fancy") FAQ

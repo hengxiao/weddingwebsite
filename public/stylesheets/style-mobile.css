@@ -15,8 +15,13 @@
 		font-size: 1.5em;
 		letter-spacing: -1px;
 	}
+	
 	.mobile_only {
-		display: block;
+		display: block !important;
+	}
+
+	#intro .fancy {
+	    font-size: 35pt;
 	}
 	
 	/* Box */

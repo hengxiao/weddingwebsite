@@ -14,29 +14,21 @@ html
     
   body
     header#header
-      img#logo(src="images/small/logo.png")
+      img#logo(src="/images/small/logo.png")
       span#logotext(class="fancy") Heng Xiao & Xingguo Chen
       nav#nav
-        ul
-          li
-            a(href="#intro") Home
-          li
-            a(href="#events") Events
-          li
-            a(href="#rsvp") RSVP
-          li
-            a(href="#faq") FAQ
+        block nav
     header#mobile_bar(class="mobile_only")
       div(class="content container small")
-        a(href="/#top") Home
-        a(href="/#events") Events
-        a(href="/#rsvp") RSVP
-        a(href="/#faq") FAQ
+        block nav_mobile
     div#content
       block content
     footer#footer
       ul(class="action")
       ul(class="menu")
-        li &copy; Heng Xiao & Xingguo Chen
-        li Design 
+        li &copy; Heng Xiao & Xingguo Chen 2018
+        li Design Reference&nbsp;
           a(href="http://html5up.net/") HTML5 Up
+        li Source Code&nbsp;
+          a(href="https://github.com/hengxiao/weddingwebsite/")
+            img(src="/images/small/gitHub.png" style="-webkit-filter: invert(1);filter: invert(1);")

@@ -37,7 +37,7 @@
 	}
 
 	#intro .fancy {
-	    font-size: 40pt;
+	    font-size: 60pt;
 	    line-height: 60pt;
 	}		
 
@@ -54,7 +54,7 @@
 		text-shadow: 0 0 20px #111;
 	}
 	.mobile_only {
-		display: none;
+		display: none !important;
 	}
 
 	.clearbg {
@@ -79,7 +79,11 @@
 	}
 
 	body {
-		background: #fff;
+		background-color: rgba(255, 249, 225); 
+		background-image: url('images/loader.gif');
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100vh;
 	}
 
 		body.loading {
@@ -1305,8 +1309,16 @@
 		background-position: top left, center center;
 	}
 
+/*********************************************************************************/
+/* Gift Registry page section                                                                  */
+/*********************************************************************************/
 
-
+	#gift {
+		background: url('images/overlay.png'), url('../images/large/japan_hokkaido.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
 
 /*********************************************************************************/
 /* Registry                                                                  */
@@ -1318,18 +1330,39 @@
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+	
 /*********************************************************************************/
 /* RSVP                                                                  */
 /*********************************************************************************/
 
 	#rsvp {
-	    background: url('images/overlay.png');//, url('../images/waterfall.jpg');
+	        background: url('images/overlay.png'), url('../images/small/lily_of_the_valley.png');
+		background-size: 256px 256px, contain;
+		background-attachment: fixed, fixed;
+		background-position: top, center;
+	}
+	
+/*********************************************************************************/
+/* Cocktail Menu                                                                 */
+/*********************************************************************************/
+
+	#cocktail_menu {
+	        background: url('images/overlay.png'), url('../images/large/cocktail_hour.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
-		background-position: top center;
+		background-position: top left, center;
 	}
+	
+/*********************************************************************************/
+/* Dinner Menu                                                                 */
+/*********************************************************************************/
 
-
+	#dinner_menu {
+	        background: url('images/overlay.png'), url('../images/large/dinner.jpg');
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center;
+	}
 
 /*********************************************************************************/
 /* Three                                                                         */
