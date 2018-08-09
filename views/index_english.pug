@@ -42,7 +42,49 @@ block intro
 block summary
   header
     h2(class="fancy") Our Story
-  p TODO: our story
+  br
+  blockquote
+    | "When we find someone whose weirdness is compatible with ours
+    | , we join up with them and fall in mutual weirdness and call it love."
+    br
+    span(style="text-align: right") -- Dr.Seuss
+  br
+  b First Met
+  p(class="more")
+    | Before Xiao and Chen met each other, they would never know
+    | how odds could come together and make a destiny. Chen first got
+    | to know Xiao in the first month she arrived in the United States on
+    | a welcome party. Xiao offered Chen and some other classmates a
+    | tour to San Francisco, and Chen took the offer. After the trip,
+    | these two strangers quickly become friends.
+  b Friendship and Affection
+  p(class="more")
+    | Chen and Xiao shared much of social life. Sometimes, Chen
+    | asked Xiao to join her home made dinner and play card games. Other
+    | times, Xiao hosted a tour to Yosemite and invited Chen to come
+    | along. From time to time, Chen found Xiao warm-hearted, smart
+    | and had an unique sense of humor, while Xiao appreciated Chen's
+    | spirit of endeavor, thirst for knowledge and balance of emotion
+    | and ration. This was when they start to share affection.
+  b The beginning of love
+  p(class="more")
+    | On a trip to Death Valley National Park, Xiao's car had mechanical
+    | failure and they were stuck in Davis. They had to spend one more
+    | day in Davis to wait for exchange of car. During this frustrating
+    | moment, they visited the beautiful campus of UC Davis, and found
+    | that there is love between them. On their way back, they stopped
+    | by the shore of San Francisco Bay near Berkeley, and this was when
+    | and where they decided to follow the impulse and established a
+    | romantic relationship.
+  b Sweet Life Together
+  p(class="more")
+    | More than four years has passed since then. After graduation from
+    | Stanford, getting the first job, moving into the first house,
+    | they've been through many life events and made many life decisions.
+    | They shared love and happiness, and they felt they are already a
+    | family. Their kindness and care to each other has set the foundation
+    | to their relationship, and gave them a strong confidence to hold
+    | hand together and face the unknown yet promising future.
 
 block weddingparty_title
   h2(class="fancy") Wedding Party
@@ -154,7 +196,6 @@ block adventure_header
 block rsvp
   h2(class="fancy") RSVP
   p By September 15th, 2018
-  p NOT ENABLED YET. SUBMITTED RSVP MAY NOT BE SAVED
   hr
   br
   form(id="rsvpForm" action="/rsvp" method="post" style="transition: visibility 0s, opacity 0.5s linear;")
@@ -164,10 +205,13 @@ block rsvp
       br
       input(type="text" name="attending" placeholder="#" pattern="[0-9]" style="width: 4em; display: inline" required)
       | &nbsp;Number Attending
-      br
-      br
+    p
       | Please initial meal preference for each guest
       br
+      | Click&nbsp;
+      a(href="/dinnermenu#dinner_menu" target="_blank") here
+      | &nbsp;to see the dinner menu
+    p
       input(type="text" name="turf" placeholder="Turf" value="" style="width: 6em; display: inline;")
       img(src="/images/small/turf.png" style="height: 2em")
       | &nbsp;
@@ -190,16 +234,23 @@ block rsvp
 block gift
   h2(class="fancy") Gift Registry
   br
-  p PREFER TO GIFT SOMETHING TANGIBLE?
-    br
+  b Prefer to gift something tangible?
+  p
     | We've created registries with Amazon, REI, Bloomingdales, Crate & Barrel and Wayfair.
     br
     | Myregistry.com has a all-in-one list where you can browse them together.
-  p WANT TO GIVE US AN UNFORGETTABLE GIFT?
-    br
+  b Want to support our unforgettable honeymoon?
+  p
     | Contribute to our Japan Honeymoon fund using the Myregistry link below.
     br
     | We'll be sure to send you postcards from places we get to enjoy and explore!
+  b Please click the following link to visit our gift registry
+  br
+  a(href="https://www.myregistry.com/giftlist/henryanddaisy" target="_blank")
+    img(src="/images/small/together.jpg")
+    br
+    | myregistry.com/giftlist/henryanddaisy
+  
 
 
 block faq

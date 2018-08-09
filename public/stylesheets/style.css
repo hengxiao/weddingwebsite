@@ -597,8 +597,9 @@
 			}
 			
 				.main.style2 .content {
-					position: relative;
-					width: 40%;
+				        position: relative;
+					padding: 2em;
+					width: 50%;
 
 					-moz-transition: all 1s ease;
 					-webkit-transition: all 1s ease;
@@ -1756,3 +1757,11 @@
 	        #rsvpForm img {
 		    height: 2em;
 	        }
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+.morecontent span {
+	display: none;
+}
