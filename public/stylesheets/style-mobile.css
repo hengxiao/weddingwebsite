@@ -16,7 +16,7 @@
 		letter-spacing: -1px;
 	}
 	
-	.mobile_only {
+	.narrow_only, .mobile_only {
 		display: block !important;
 	}
 

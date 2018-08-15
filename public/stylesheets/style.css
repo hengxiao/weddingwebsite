@@ -53,7 +53,8 @@
 	.shadow {
 		text-shadow: 0 0 20px #111;
 	}
-	.mobile_only {
+
+	.narrow_only, .mobile_only {
 		display: none !important;
 	}
 
@@ -564,9 +565,14 @@
 			
 				.main.style1 h2 {
 					font-size: 1.25em;
-					line-height: 1.5em;
+					line-height: 1.5em !important;
 					//letter-spacing: -4px;
+					vertical-align: center;
 				}
+				
+				  .main.style1 h2 span {
+				        line-height: 1.5em !important;
+				  }
 				
 				.main.style1 .content {
 					opacity: 1.0;

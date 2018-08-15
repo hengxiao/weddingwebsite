@@ -35,6 +35,11 @@
 						.main.style2.inactive.left .content {
 							left: -60%;
 						}
+
+.narrow_only {
+                display: block !important;
+		}
+
 						
 /*********************************************************************************/
 /* Footer                                                                        */
