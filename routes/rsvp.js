@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var os = require('os');
-var record_file = fs.createWriteStream("/home/heng890331/wedding_record/rsvp.txt", {flags: 'a', encoding: "utf8", mode: 0666});
-//var record_file = fs.createWriteStream(os.homedir() + "/wedding_record/rsvp.txt", {flags: 'a', encoding: "utf8", mode: 0666});
+//var record_file = fs.createWriteStream("/home/heng890331/wedding_record/rsvp.txt", {flags: 'a', encoding: "utf8", mode: 0666});
+var record_file = fs.createWriteStream(os.homedir() + "/wedding_record/rsvp.txt", {flags: 'a', encoding: "utf8", mode: 0666});
 
 /* GET RSVP page. */
 var rsvppage = function(req, res, next) {
